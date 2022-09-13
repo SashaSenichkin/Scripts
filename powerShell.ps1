@@ -7,3 +7,4 @@ Get-appxpackage -allusers *WindowsMaps* | Remove-AppxPackage
 Get-appxpackage -allusers *WindowsFeedbackHub* | Remove-AppxPackage
 Get-appxpackage -allusers *xbox* | Remove-AppxPackage
 Get-appxpackage -allusers *store* | Remove-AppxPackage
+Get-appxpackage -allusers *groove* | Remove-AppxPackage
