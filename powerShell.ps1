@@ -1,0 +1,9 @@
+Get-appxpackage -allusers *Microsoft.549981C3F5F10* | Remove-AppxPackage
+Get-appxpackage -allusers *Bing* | Remove-AppxPackage
+Get-appxpackage -allusers *MixedReality* | Remove-AppxPackage
+Get-appxpackage -allusers *People* | Remove-AppxPackage
+Get-appxpackage -allusers *Wallet* | Remove-AppxPackage
+Get-appxpackage -allusers *WindowsMaps* | Remove-AppxPackage
+Get-appxpackage -allusers *WindowsFeedbackHub* | Remove-AppxPackage
+Get-appxpackage -allusers *xbox* | Remove-AppxPackage
+Get-appxpackage -allusers *store* | Remove-AppxPackage
