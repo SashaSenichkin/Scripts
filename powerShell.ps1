@@ -11,17 +11,17 @@ Get-appxpackage -allusers *groove* | Remove-AppxPackage
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-choco install firefox
-choco install notepadplusplus
-choco install 7zip
-choco install coretemp
-choco install telegram
+choco install firefox -y
+choco install notepadplusplus -y
+choco install 7zip -y
+choco install coretemp -y
+choco install telegram -y
 
-choco install docker-desktop
-choco install postman
-choco install sourcetree
-choco install dbeaver
-choco install jetbrains-rider
+choco install docker-desktop -y
+choco install postman -y
+choco install sourcetree -y
+choco install dbeaver -y
+choco install jetbrains-rider -y
 
-choco install windirstat
+choco install windirstat -y
 
