@@ -16,6 +16,7 @@ choco install notepadplusplus -y
 choco install 7zip -y
 choco install coretemp -y
 choco install telegram -y
+choco install aimp -y
 
 choco install docker-desktop -y
 choco install postman -y
