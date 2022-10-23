@@ -11,6 +11,8 @@ Get-appxpackage -allusers *groove* | Remove-AppxPackage
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
+New-Item -Path HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer -Name DisableNotificationCenter –Force -Value 0
+
 choco install firefox -y
 choco install notepadplusplus -y
 choco install 7zip -y
