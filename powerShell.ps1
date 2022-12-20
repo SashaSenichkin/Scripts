@@ -21,6 +21,7 @@ choco install coretemp -y
 choco install telegram -y
 choco install aimp -y
 choco install mpc-be -y
+choco install lightshot.install
 
 choco install docker-desktop -y
 choco install postman -y
