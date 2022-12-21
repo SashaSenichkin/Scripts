@@ -20,6 +20,7 @@ choco install 7zip -y
 choco install coretemp -y
 choco install telegram -y
 choco install aimp -y
+choco install git -y
 choco install mpc-be -y
 choco install lightshot.install
 
