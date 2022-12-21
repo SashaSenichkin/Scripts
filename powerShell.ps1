@@ -28,6 +28,7 @@ choco install postman -y
 choco install sourcetree -y
 choco install dbeaver -y
 choco install jetbrains-rider -y
+choco install nodejs -y
 
 choco install windirstat -y
 choco install winmerge -y
