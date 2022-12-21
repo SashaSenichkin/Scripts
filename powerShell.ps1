@@ -9,6 +9,7 @@ Get-appxpackage -allusers *xbox* | Remove-AppxPackage
 Get-appxpackage -allusers *store* | Remove-AppxPackage
 Get-appxpackage -allusers *groove* | Remove-AppxPackage
 
+Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 New-Item -Path HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer -Name DisableNotificationCenter –Force -Value 0
@@ -19,14 +20,18 @@ choco install 7zip -y
 choco install coretemp -y
 choco install telegram -y
 choco install aimp -y
+choco install mpc-be -y
+choco install lightshot.install
 
 choco install docker-desktop -y
 choco install postman -y
 choco install sourcetree -y
 choco install dbeaver -y
 choco install jetbrains-rider -y
+choco install nodejs -y
 
 choco install windirstat -y
+choco install winmerge -y
 
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll" -ItemType RegistryKey -Force}
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell" -ItemType RegistryKey -Force}
