@@ -22,7 +22,7 @@ choco install telegram -y
 choco install aimp -y
 choco install git -y
 choco install mpc-be -y
-choco install lightshot.install
+choco install lightshot.install -y
 
 choco install docker-desktop -y
 choco install postman -y
@@ -30,6 +30,7 @@ choco install sourcetree -y
 choco install dbeaver -y
 choco install jetbrains-rider -y
 choco install nodejs -y
+choco install obs-studio -y
 
 choco install windirstat -y
 choco install winmerge -y
