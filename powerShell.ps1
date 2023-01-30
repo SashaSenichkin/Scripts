@@ -31,6 +31,8 @@ choco install dbeaver -y
 choco install jetbrains-rider -y
 choco install nodejs -y
 choco install obs-studio -y
+
+choco install putty  -y
 choco install mtputty -y
 
 choco install windirstat -y
