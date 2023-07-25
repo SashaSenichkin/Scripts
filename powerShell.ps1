@@ -19,7 +19,6 @@ choco install notepadplusplus -y
 choco install 7zip -y
 choco install coretemp -y
 choco install telegram -y
-choco install aimp -y
 choco install git -y
 choco install mpc-be -y
 choco install lightshot.install -y
@@ -38,6 +37,16 @@ choco install mtputty -y
 
 choco install windirstat -y
 choco install winmerge -y
+
+choco install aimp -y
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "[Global Hotkeys]"
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "Suspend=0"
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerPause=41041"
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerVolumeUp=41025"
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerVolumeDown=41050"
+Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerNextTrack2=41047"
+
+curl -o "C:\Program Files\AIMP\Plugins\youtubePlugin.zip" http://www.aimp.ru/?do=catalog.download"&"id=732
 
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll" -ItemType RegistryKey -Force}
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell" -ItemType RegistryKey -Force}
