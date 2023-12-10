@@ -47,6 +47,8 @@ Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerNextTrack2=4
 
 curl -o "C:\Program Files\AIMP\Plugins\youtubePlugin.zip" http://www.aimp.ru/?do=catalog.download"&"id=732
 
+Import-StartLayout -LayoutPath "layout.xml" -MountPath "C:\"
+
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll" -ItemType RegistryKey -Force}
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell" -ItemType RegistryKey -Force}
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\open")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\open" -ItemType RegistryKey -Force}
