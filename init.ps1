@@ -20,11 +20,12 @@ choco install coretemp -y
 choco install telegram -y
 choco install git -y
 choco install mpc-be -y
+choco install paint.net -y
+choco install processhacker -y
 choco install lightshot.install -y
 choco install foxitreader -y
 choco install obs-studio -y
 
-choco install docker-desktop -y
 choco install postman -y
 choco install sourcetree -y
 choco install dbeaver -y
@@ -46,6 +47,12 @@ Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerVolumeDown=4
 Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerNextTrack2=41047"
 
 curl -o "C:\Program Files\AIMP\Plugins\youtubePlugin.zip" http://www.aimp.ru/?do=catalog.download"&"id=732
+
+
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName Containers
+
+choco install docker-desktop -y
 
 Import-StartLayout -LayoutPath "layout.xml" -MountPath "C:\"
 
