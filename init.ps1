@@ -29,13 +29,16 @@ choco install foxitreader -y
 choco install obs-studio -y
 
 choco install postman -y
-choco install sourcetree -y
 choco install dbeaver -y
 choco install jetbrains-rider -y
 choco install nodejs -y
 
 choco install putty  -y
 choco install mtputty -y
+
+choco install sourcetree -y
+plink.exe github.com
+#add repo to approved
 
 choco install windirstat -y
 choco install winmerge -y
