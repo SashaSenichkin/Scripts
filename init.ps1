@@ -11,7 +11,9 @@ Get-appxpackage -allusers *groove* | Remove-AppxPackage
 
 Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy Bypass
 
-New-Item -Path HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer -Name DisableNotificationCenter –Force -Value 0
+New-Item -Path "HKCU:\Software\Policies\Microsoft\Windows" -Name "Explorer" -force
+New-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\Explorer" -Name "DisableNotificationCenter" -PropertyType "DWord" -Value 1
+New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNotifications" -Name "ToastEnabled" -PropertyType "DWord" -Value 0
 
 choco install firefox -y
 choco install notepadplusplus -y
