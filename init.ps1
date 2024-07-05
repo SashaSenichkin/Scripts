@@ -58,6 +58,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Containers
 
 choco install docker-desktop -y
+Copy-Item ".\.wslconfig" -Destination '~\.wslconfig' 
 
 Import-StartLayout -LayoutPath "layout.xml" -MountPath "C:\"
 
