@@ -36,6 +36,7 @@ choco install nodejs -y
 choco install putty -y
 choco install mtputty -y
 
+choco install dotnetcore-sdk -y
 choco install sourcetree -y
 plink.exe github.com
 #add repo to approved
