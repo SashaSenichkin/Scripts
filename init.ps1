@@ -10,6 +10,7 @@ Get-appxpackage -allusers *store* | Remove-AppxPackage
 Get-appxpackage -allusers *groove* | Remove-AppxPackage
 
 Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy Bypass
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 New-Item -Path "HKCU:\Software\Policies\Microsoft\Windows" -Name "Explorer" -force
 New-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\Explorer" -Name "DisableNotificationCenter" -PropertyType "DWord" -Value 1
@@ -25,17 +26,17 @@ choco install mpc-be -y
 choco install paint.net -y
 choco install processhacker -y
 choco install lightshot.install -y
-choco install foxitreader -y
+choco install sumatrapdf.install -y
 choco install obs-studio -y
 
 choco install postman -y
 choco install dbeaver -y
-choco install jetbrains-rider -y
 choco install nodejs -y
 
-choco install putty  -y
+choco install putty -y
 choco install mtputty -y
 
+choco install dotnetcore-sdk -y
 choco install sourcetree -y
 plink.exe github.com
 #add repo to approved
@@ -60,7 +61,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Containers
 choco install docker-desktop -y
 Copy-Item ".\.wslconfig" -Destination '~\.wslconfig' 
 
-Import-StartLayout -LayoutPath "layout.xml" -MountPath "C:\"
+#Import-StartLayout -LayoutPath "layout.xml" -MountPath "C:\"
 
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll" -ItemType RegistryKey -Force}
 If  ( -Not ( Test-Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell")){New-Item -Path "Registry::HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell" -ItemType RegistryKey -Force}
