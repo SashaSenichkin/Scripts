@@ -19,7 +19,6 @@ New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNoti
 choco install firefox -y
 choco install notepadplusplus -y
 choco install 7zip -y
-choco install coretemp -y
 choco install telegram -y
 choco install git -y
 choco install mpc-be -y
@@ -38,7 +37,7 @@ choco install mtputty -y
 
 choco install dotnetcore-sdk -y
 choco install sourcetree -y
-plink.exe github.com
+#plink.exe github.com
 #add repo to approved
 
 choco install windirstat -y
