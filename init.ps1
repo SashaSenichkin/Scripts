@@ -19,7 +19,6 @@ New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\PushNoti
 choco install firefox -y
 choco install notepadplusplus -y
 choco install 7zip -y
-choco install coretemp -y
 choco install telegram -y
 choco install git -y
 choco install mpc-be -y
@@ -38,19 +37,19 @@ choco install mtputty -y
 
 choco install dotnetcore-sdk -y
 choco install sourcetree -y
-plink.exe github.com
+#plink.exe github.com
 #add repo to approved
 
 choco install windirstat -y
 choco install winmerge -y
 
 choco install aimp -y
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "[Global Hotkeys]"
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "Suspend=0"
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerPause=41041"
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerVolumeUp=41025"
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerVolumeDown=41050"
-Add-Content "C:\Users\admin\AppData\Roaming\AIMP\AIMP.ini" "acPlayerNextTrack2=41047"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "[Global Hotkeys]"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "Suspend=0"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "acPlayerPause=41041"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "acPlayerVolumeUp=41025"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "acPlayerVolumeDown=41050"
+Add-Content "$Env:AppData\AIMP\AIMP.ini" "acPlayerNextTrack2=41047"
 
 curl -o "C:\Program Files\AIMP\Plugins\youtubePlugin.zip" http://www.aimp.ru/?do=catalog.download"&"id=732
 
